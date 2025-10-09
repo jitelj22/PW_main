@@ -43,7 +43,7 @@ test.describe("[Registration Form]", async ()=> {
         hobbies: ["Travelling", "Movies", "Sports", "Gaming", "Dancing"],
         language: "English, Русский",
         skills: ["JavaScript", "Python", "Java", "C++", "Ruby"],
-        yearOfBirth: "1900",
+        yearOfBirth: "1980",
         monthOfBirth: "August",
         dayOfBirth: "10",
         password: "Qwerty12345",
