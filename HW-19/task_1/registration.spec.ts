@@ -27,7 +27,7 @@ enum NOTIFICATIONS {
   EMPTY_USERNAME = "Username is required",
   REGISTER_SUCCESS_BACK_TO_LOGIN = "Successfully registered! Please, click Back to return on login page",
 }
-test.describe("[Demo Login Form] [Registration]", () => { 
+test.describe("[Registration]", () => { 
     const validCredentials: ICredentials = { 
         username: "Filipok",
         password: "Qrtyuiop",
@@ -55,7 +55,6 @@ test.beforeEach(async ({ page }) => {
         await submitButton.click();
         await expect(successLoginMessage).toHaveText(NOTIFICATIONS.REGISTER_SUCCESS_BACK_TO_LOGIN);
         await backToLoginButton.click();
-        //await expect(successRegistrationMessage).toHaveText(NOTIFICATIONS.REGISTER_SUCCESS_BACK_TO_LOGIN);
         await expect(loginPageTitle).toHaveText("Login");
 
     });

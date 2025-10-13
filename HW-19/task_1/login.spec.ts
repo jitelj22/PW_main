@@ -16,8 +16,6 @@
       Password: обязательное
 
  */
-
-//import test, { expect } from "@playwright/test";
 import test, { expect } from "@playwright/test";
 
 interface ICredentials {
@@ -26,7 +24,7 @@ interface ICredentials {
 }
 
 
-test.describe("[Demo Login Form] [Login]", () => {
+test.describe("[Login]", () => {
 
   const validCredentials: ICredentials = {
     username: "Filipok",
@@ -50,7 +48,7 @@ test.describe("[Demo Login Form] [Login]", () => {
     await expect(successLoginMessage).toHaveText(`Logged in!`);
     await usernameInput.fill(validCredentials.username);
     await passwordInput.fill(validCredentials.password);
-    await submitButton.click();;
+    await submitButton.click();
 
   });
 
