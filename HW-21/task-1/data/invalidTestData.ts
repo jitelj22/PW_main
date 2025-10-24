@@ -27,13 +27,13 @@ const invalidTestData: IUserData[] = [
 {
     credentials: { username: "ab", password: `${validCredentials[0].credentials.password}` },
     successMessage: NOTIFICATIONS.SHORT_USERNAME,
-    title: "Username is too short",
+    title: "Username should contain at least 3 characters",
 },
 
 {
     credentials: { username: "a".repeat(41), password: `${validCredentials[0].credentials.password}` },
     successMessage: NOTIFICATIONS.lONG_USERNAME,
-    title: "Username is too long",
+    title: "Username should contain less than 40 characters",
 },
 {
     credentials: { username: ` ${validCredentials[0].credentials.username}`, password: `${validCredentials[0].credentials.password}` },   
