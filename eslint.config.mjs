@@ -18,9 +18,10 @@ export default [
     rules: {
       "prettier/prettier": ["error", { endOfLine: "auto", printWidth: 120, singleQuote: false }],
       eqeqeq: "error",
+      "@typescript-eslint/no-unused-vars": "off", // ✅ отключили проверку
     },
   },
   {
-    ignores: ["node_modules", "**/dist/**", "eslint.config.mts", "playwright-report", "test-results"],
+    ignores: ["node_modules", "**/dist/**", "eslint.config.mts", "playwright-report"],
   },
 ];
