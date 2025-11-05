@@ -19,6 +19,7 @@ export default [
       "prettier/prettier": ["error", { endOfLine: "auto", printWidth: 120, singleQuote: false }],
       eqeqeq: "error",
       "@typescript-eslint/no-unused-vars": "off", // ✅ отключили проверку
+      "@typescript-eslint/no-explicit-any": "off", // ✅ отключаем ошибку "Unexpected any"
     },
   },
   {
