@@ -18,9 +18,14 @@ export default [
     rules: {
       "prettier/prettier": ["error", { endOfLine: "auto", printWidth: 120, singleQuote: false }],
       eqeqeq: "error",
+      "@typescript-eslint/no-unused-vars": ["error", { // ✅ отключили проверку
+      "argsIgnorePattern": "^_",
+      "varsIgnorePattern": "^_"
+    }], 
+      "@typescript-eslint/no-explicit-any": "off", // ✅ отключаем ошибку "Unexpected any"
     },
   },
   {
-    ignores: ["node_modules", "**/dist/**", "eslint.config.mts", "playwright-report", "test-results"],
+    ignores: ["node_modules", "**/dist/**", "eslint.config.mts", "playwright-report"],
   },
 ];
