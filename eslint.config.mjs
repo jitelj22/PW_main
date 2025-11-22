@@ -18,7 +18,10 @@ export default [
     rules: {
       "prettier/prettier": ["error", { endOfLine: "auto", printWidth: 120, singleQuote: false }],
       eqeqeq: "error",
-      "@typescript-eslint/no-unused-vars": "off", // ✅ отключили проверку
+      "@typescript-eslint/no-unused-vars": ["error", { // ✅ отключили проверку
+      "argsIgnorePattern": "^_",
+      "varsIgnorePattern": "^_"
+    }], 
       "@typescript-eslint/no-explicit-any": "off", // ✅ отключаем ошибку "Unexpected any"
     },
   },
