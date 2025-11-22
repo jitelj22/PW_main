@@ -1,5 +1,5 @@
-import { test as base, expect } from "fixtures/pages.fixture";
-import { credentials, SALES_PORTAL_URL } from "config/env";
+import { SALES_PORTAL_URL, credentials } from "config/env";
+import { test as base, expect } from "fixtures";
 
 export const test = base.extend<{
   loginAsAdmin: () => Promise<void>;
